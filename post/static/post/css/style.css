@@ -134,7 +134,7 @@ body {
 .section-content {
     line-height: 19px;
     font-size: 19px;
-    margin-top: 15px;
+    margin-top: 8px;
     margin-left: 14px;
 }
 
@@ -149,4 +149,42 @@ body {
 
 .heart {
     color: red;
+}
+
+.date {
+    margin-top: 5px;
+}
+
+.content {
+    margin-left: 14px;
+    font-size: 22px;
+    color: rgb(94, 94, 94);
+    line-height: 24px;
+}
+
+h1 {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 40px;
+    color: rgb(71, 71, 71);
+}
+
+h2 {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 30px;
+    color: rgb(71, 71, 71);
+}
+
+h3 {
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-size: 24px;
+    color: rgb(71, 71, 71);
 }
