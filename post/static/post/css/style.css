@@ -1,190 +1,191 @@
 /* Optimizing these imports */
 @font-face {
-    font-family: linotte;
-    src: url(../font/linotte/Linotte_Regular.otf);
+  font-family: linotte;
+  src: url(../font/linotte/Linotte_Regular.otf);
 }
 
 @font-face {
-    font-family: linotte-bold;
-    src: url(../font/linotte/Linotte_Bold.otf);
+  font-family: linotte-bold;
+  src: url(../font/linotte/Linotte_Bold.otf);
 }
 
 @font-face {
-    font-family: linotte-heavy;
-    src: url(../font/linotte/Linotte_Heavy.otf);
+  font-family: linotte-heavy;
+  src: url(../font/linotte/Linotte_Heavy.otf);
 }
 
 @font-face {
-    font-family: linotte-light;
-    src: url(../font/linotte/Linotte_Light.otf);
+  font-family: linotte-light;
+  src: url(../font/linotte/Linotte_Light.otf);
 }
 
 @font-face {
-    font-family: linotte-sbold;
-    src: url(../font/linotte/Linotte_Semi_Bold.otf);
+  font-family: linotte-sbold;
+  src: url(../font/linotte/Linotte_Semi_Bold.otf);
 }
 
 @font-face {
-    font-family: raily;
-    src: url(../font/raily/Railey_PersonalUse.ttf);
+  font-family: raily;
+  src: url(../font/raily/Railey_PersonalUse.ttf);
 }
 
 body {
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    font-family: linotte;
-    letter-spacing: 0px;
-    font-size: 17px;
-    color: #8d8f90;
-    font-weight: 400;
-    line-height: 32px;
-    background-color: #edefef;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: linotte;
+  letter-spacing: 0px;
+  font-size: 19px;
+  color: #8d8f90;
+  font-weight: 400;
+  line-height: 32px;
+  background-color: #edefef;
 }
 
 .me {
-    color: #fff;
+  color: #fff;
 }
 
 .link {
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .link:focus,
 .link:hover {
-    text-decoration: none;
-    color: #ffc400;
+  text-decoration: none;
+  color: #ffc400;
 }
 
 .page-header {
-    background: url(../files/back.jpg) no-repeat;
-    position: relative;
-    background-size: cover;
+  background: url(../files/back.jpg) no-repeat fixed;
+  position: relative;
+  background-size: cover;
 }
 
 .page-caption {
-    padding-top: 170px;
-    padding-bottom: 174px;
+  padding-top: 170px;
+  padding-bottom: 174px;
 }
 
 .page-title {
-    font-family: linotte;
-    font-size: 46px;
-    line-height: 1;
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: -1px;
+  font-family: linotte;
+  font-size: 46px;
+  line-height: 1;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -1px;
 }
 
 .page-info {
-    color: #fff;
-    margin-top: -18px;
-    margin-left: 190px;
-    font-family: linotte;
+  color: #fff;
+  margin-top: -18px;
+  margin-left: 190px;
+  font-family: linotte;
 }
 
 .non-circle {
-    list-style: none;
-    text-align: center;
+  list-style: none;
+  text-align: center;
 }
 
 .non-circle li {
-    display: inline;
-    color: #fff;
-    margin: 3px;
-    font-size: 21px;
+  display: inline;
+  color: #fff;
+  margin: 3px;
+  font-size: 21px;
 }
 
 .card-section {
-    position: relative;
-    bottom: 60px;
+  position: relative;
+  bottom: 60px;
 }
 
 .card-block {
-    padding: 80px;
+  padding: 80px;
 }
 
 .card-title {
-    font-family: linotte-sbold;
+  font-family: linotte-sbold;
 }
 
 .card-text {
-    margin-top: -10px;
-    margin-left: 14px;
+  margin-top: -10px;
+  margin-left: 14px;
 }
 
 .section-title {
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-family: raily;
-    color: rgb(71, 71, 71);
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: raily;
+  color: rgb(71, 71, 71);
 }
 
 .section-title:focus,
 .section-title:hover {
-    text-decoration: none;
-    color: #ffa600;
+  text-decoration: none;
+  color: #ffa600;
 }
 
 .section-content {
-    line-height: 19px;
-    font-size: 19px;
-    margin-top: 8px;
-    margin-left: 14px;
+  line-height: 19px;
+  font-size: 19px;
+  margin-top: 8px;
+  margin-left: 14px;
 }
 
 .box {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .bot-link {
-    color: rgb(71, 71, 71);
-    font-size: 20px;
+  color: rgb(71, 71, 71);
+  font-size: 20px;
 }
 
 .heart {
-    color: red;
+  color: red;
 }
 
 .date {
-    margin-top: 5px;
-}
-
-.content {
-    margin-left: 14px;
-    font-size: 22px;
-    color: rgb(94, 94, 94);
-    line-height: 24px;
+  margin-top: 5px;
 }
 
 h1 {
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-size: 40px;
-    color: rgb(71, 71, 71);
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 40px;
+  color: rgb(71, 71, 71);
 }
 
 h2 {
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-size: 30px;
-    color: rgb(71, 71, 71);
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 30px;
+  color: rgb(71, 71, 71);
 }
 
 h3 {
-    text-decoration: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    font-size: 24px;
-    color: rgb(71, 71, 71);
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 24px;
+  color: rgb(71, 71, 71);
 }
+
+.page-footer {
+  margin-top: 20px;
+}
+
+.date {}
+
+.smile {}
