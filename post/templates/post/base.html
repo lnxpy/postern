@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Postern Notebook</title>
+    <title>{% block topbar %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'post/css/bootstrap.min.css' %}">
     <script src="{% static 'post/js/jquery.min.js' %}"></script>
@@ -23,37 +23,16 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-caption">
-                        <h1 class="page-title">Postern Notebook</h1>
-                        <p class="text-center page-info">Let's have some fun :)</p>
-                        <ul class="non-circle">
-                            <li><a href="https://github.com/lnxpy" class="link me" data-toggle="tooltip"
-                                    title="GitHub"><span class="fa fa-github-alt"></span></a></li>
-                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="link me" subject="subject text"
-                                    data-toggle="tooltip" title="Gmail"><span class="fa fa-google"></span></a></li>
-                        </ul>
+                        <h1 class="page-title">{% block title %}{% endblock %}</h1>
+                        {% block info %}
+                        {% endblock  %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="card-section">
-        <div class="container">
-            <div class="card-block bg-white mb30 shadow rounded">
-            <h1>Postern Notebook</h1>
-            <hr>
-            <p>Postern is my Django-based online notebook which I write interesting posts for you in. It's <b>Ali Reza Yahyapour (lnxpy)</b> and Postern is where you can follow me and mine.</p>
-            <br>
-            <h3><span class="fa fa-hand-o-right"></span> You can also read about..</h3>
-            <p class="content">In the Postern, you can find about programming, web development, AI, Data Science, and whatever amazes me and you.</p>
-                <div class="card border-primary mb-3">
-                    <div class="card-header">Tip</div>
-                    <div class="card-body text-primary">
-                        <h5 class="card-title">Postern is in progress!</h5>
-                        <p class="card-text">This project is in progress which means you can see the progress in the <a
-                                class="link" href="https://github.com/lnxpy/postern">Postern repo</a>.</p>
-                    </div>
-                </div>
+    {% block primary %}
+    {% endblock  %}
                 {% block content %}
                 {% endblock %}
             </div>

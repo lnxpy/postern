@@ -1,15 +1,51 @@
 {% extends "post/base.html" %}
 
+{% block topbar %}
+Postern Notebook
+{% endblock  %}
+
+{% block title %}
+Postern Notebook
+{% endblock %}
+
+{% block info %}
+                        <ul class="non-circle">
+                            <li><a href="https://github.com/lnxpy" class="link me" data-toggle="tooltip"
+                                    title="GitHub"><span class="fa fa-github-alt"></span></a></li>
+                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="link me" subject="subject text"
+                                    data-toggle="tooltip" title="Gmail"><span class="fa fa-google"></span></a></li>
+                        </ul>
+{% endblock  %}
+
+{% block primary %}
+<div class="card-section">
+        <div class="container">
+            <div class="card-block bg-white mb30 shadow rounded">
+            <h1>Postern Notebook</h1>
+            <hr>
+            <p class="content">Postern is my Django-based online notebook which I write interesting posts for you in. It's <b>Ali Reza Yahyapour (lnxpy)</b> and Postern is where you can follow me and mine.</p>
+            <br>
+            <h3><span class="fa fa-hand-o-right"></span> You can also read about..</h3>
+            <p class="content">In the Postern, you can find about programming, web development, AI, Data Science, and whatever amazes me and you.</p>
+                                <div class="card border-primary mb-3">
+                    <div class="card-header">Tip</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">Postern is in progress!</h5>
+                        <p class="card-text">This project is in progress which means you can see the progress in the <a
+                                class="link" href="https://github.com/lnxpy/postern">Postern repo</a>.</p>
+                    </div>
+                </div>
+{% endblock  %}
 {% block content %}
 <div class="row">
+    {% for post in posts %}
     <div class="col-sm-12 box">
         <div class="row">
-            <div class="col-sm-6"><h1><a class="section-title" href="#">Let's See How Django is Powerful</a></h1></div>
-            <div class="col-sm-2 date"><span class="fa fa-clock-o"></span><span class="date">12.02.2019</span></div>
-            <div class="col-sm-2 date"><span class="fa fa-pen"></span><a class="link">lnxpy</a></div>            
-            <div class="col-sm-2 date"><span class="fa fa-smile-o"></span><span class="smile">1.4k</span></div>
+            <div class="col-sm-6"><h1><a class="section-title" href="{{post.title}}">{{post.title}}</a></h1></div>
         </div>
-            <p class="section-content">Content</p>
+            <p class="section-content">{{post.summary}}..</p>
+            <p><span class="fa fa-clock-o"></span><span class="date"> {{post.publish}}</span></p>            
     </div>
+    {% endfor %}
 </div>
 {% endblock %}

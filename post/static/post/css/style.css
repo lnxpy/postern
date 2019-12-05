@@ -79,13 +79,6 @@ body {
   letter-spacing: -1px;
 }
 
-.page-info {
-  color: #fff;
-  margin-top: -18px;
-  margin-left: 190px;
-  font-family: linotte;
-}
-
 .non-circle {
   list-style: none;
   text-align: center;
@@ -132,9 +125,9 @@ body {
 }
 
 .section-content {
-  line-height: 19px;
+  line-height: 20px;
   font-size: 19px;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-left: 14px;
 }
 
@@ -182,10 +175,9 @@ h3 {
   color: rgb(71, 71, 71);
 }
 
+p.content {
+  line-height: 25px;
+}
 .page-footer {
   margin-top: 20px;
 }
-
-.date {}
-
-.smile {}
