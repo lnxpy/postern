@@ -12,7 +12,7 @@
 - [ ] Designing the templates
 - [ ] Getting ready for the deployment on the server
 - [ ] **Getting ready for the great celebration :)**
-- [.] Adding some features to Postern
+- [ ] Adding some features to Postern..
 
 ### Thanks to..
 * [Django](https://djangoproject.com)
