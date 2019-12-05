@@ -9,10 +9,11 @@
 - [x] Creating app
 - [x] Setting the URLs
 - [x] Upload the templates
-- [ ] Designing the templates
-- [ ] Getting ready for the deployment on the server
+- [x] Designing the templates
+- [x] Getting ready for the deployments on the server
+- [ ] Simple features for Postern
 - [ ] **Getting ready for the great celebration :)**
-- [ ] Adding some features to Postern..
+- [ ] Updating
 
 ### Thanks to..
 * [Django](https://djangoproject.com)
