@@ -2,7 +2,47 @@
 
 Django-based project to store my events with you. Postern is basically a project with Worpress-like posting platform to store your stats and situations with your friends. In this journy, I'm going to show you how a tiny project gets bigger and bigger and how wonderful it goes on. You can also visit the Postern from [here](lnxpy.pythonanywhere.com).
 
+# Set it Up
+Let's take a look at how you can have this project on your local system. You just need to do exactly what I did. Be sure that you have already installed python>3.6.
+
+#### Clone it
+###### Linux
+Let's clone the original Postern and install it's requirements locally. Clone the Postern repository with the following command.
+
+    git clone https://github.com/lnxpy/postern.git
+
+Now, you just need to create a venv and install the requirements of Postern.
+
+#### Create a Virtual Environment
+###### Linux
+Install the pip3 package on your system with the following command on your `terminal`.
+
+    sudo apt-get install python3-pip
+
+Now, you need to install the `virtualenv` of python3 using `pip3` on your shell.
+    
+    sudo pip3 install virtualenv
+    
+It's time to create a virtualenv and get ready for the next step. Fist, switch into the cloned directory to classify your project then create a venv locally.
+
+    cd postern
+    virtualenv -p /bin/python3.7 .venv
+    source .venv/bin/activate
+    
+Now, you've switched into your virtualenv which is `.venv`. Let's install the requirements.
+
+    sudo pip3 install -r requirements.txt 
+
+#### Finally, Run it
+###### Linux
+Before you could run it up, you need to create a database for your project. Use the following commands to create the sqlite database and get the first run of your project on your local system.
+
+    python manage.py migrate
+    python manage.py runserver
+
 # Preview
+Now, you should have something like this. You can change templates, add new views, add new features, and make it ready for the deployment on your specific server. Enjoy it.
+
 <center><img src="https://lh6.googleusercontent.com/n7YFYLgS9U7XdlFXL3qm_XqqT9WSQPfga-WgmKZFTclAOAQKlt-AU1ma_VTsAXda9fcKv6ywBGHrZZ_qa5y4=w1366-h633-rw">
 </center>
 
