@@ -31,11 +31,11 @@ It's time to create a virtualenv and get ready for the next step. Fist, switch i
     
 Now, you've switched into your virtualenv which is `.venv`. Let's install the requirements.
 
-    sudo pip install -r requirements.txt 
+    pip install -r requirements.txt 
 
 #### Finally, Run it
 ###### Linux
-Before you could run it up, you need to create a database for your project. Use the following commands to create the sqlite database and get the first run of your project on your local system.
+Before you could run it up, you need to create a database for your project. Use the following commands to create the sqlite database and get the first run of your project on your local system. Before you collect the database and run the project, be sure that `DEBUG` variable switched to `True`.
 
     python manage.py migrate
     python manage.py runserver
