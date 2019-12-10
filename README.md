@@ -2,6 +2,10 @@
 
 Django-based project to store my events with you.
 
+# Preview
+<center><img src="https://lh6.googleusercontent.com/n7YFYLgS9U7XdlFXL3qm_XqqT9WSQPfga-WgmKZFTclAOAQKlt-AU1ma_VTsAXda9fcKv6ywBGHrZZ_qa5y4=w1366-h633-rw">
+</center>
+
 # TODO list
 - [x] Creating the project
 - [x] Pushing my first commit to GitHub
@@ -13,7 +17,7 @@ Django-based project to store my events with you.
 - [x] Getting ready for the deployments on the server
 - [ ] Simple features for Postern (post structures and database development)
 - [ ] Implementing a Wordpress-like posting platform on Postern
-- [ ] Getting ready for the **great celebration** ;-)
+- [ ] Getting ready for the **Great Celebration** 🎉🍰🥳
 
 ### Thanks to..
 * [Django](https://djangoproject.com)
