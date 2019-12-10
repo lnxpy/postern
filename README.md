@@ -31,7 +31,7 @@ It's time to create a virtualenv and get ready for the next step. Fist, switch i
     
 Now, you've switched into your virtualenv which is `.venv`. Let's install the requirements.
 
-    sudo pip3 install -r requirements.txt 
+    sudo pip install -r requirements.txt 
 
 #### Finally, Run it
 ###### Linux
