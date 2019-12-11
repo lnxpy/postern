@@ -43,7 +43,7 @@ Before you could run it up, you need to create a database for your project. Use 
 # Preview
 Now, you should have something like this. You can change templates, add new views, add new features, and make it ready for the deployment on your specific server. Enjoy it.
 
-<center><img src="https://lh6.googleusercontent.com/n7YFYLgS9U7XdlFXL3qm_XqqT9WSQPfga-WgmKZFTclAOAQKlt-AU1ma_VTsAXda9fcKv6ywBGHrZZ_qa5y4=w1366-h633-rw">
+<center><img src="https://github.com/lnxpy/postern/blob/master/shots/shot.jpeg">
 </center>
 
 # TODO list
