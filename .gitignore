@@ -103,6 +103,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.django_venv
 .django-venv
 .env
 .venv
