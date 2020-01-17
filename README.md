@@ -55,8 +55,8 @@ Now, you should have something like this. You can change templates, add new view
 - [x] Upload the templates
 - [x] Designing the templates
 - [x] Getting ready for the deployments on the server
-- [ ] Simple features for Postern (post structures and database development)
-- [ ] Implementing a Wordpress-like posting platform on Postern
+- [x] Simple features for Postern (post structures and database development)
+- [ ] UI Compilations
 - [ ] Getting ready for the **Great Celebration** 🎉🍰🥳
 
 ### Thanks to..
