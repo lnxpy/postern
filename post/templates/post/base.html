@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'post/css/bootstrap.min.css' %}">
     <script src="{% static 'post/js/jquery.min.js' %}"></script>
     <script src="{% static 'post/js/bootstrap.min.js' %}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="{% static 'posts/js/popper.min.js' %}"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'post/css/style.css' %}">
     <script src="{% static 'post/js/main.js'%}"></script>
@@ -32,8 +32,10 @@
             </div>
         </div>
     </div>
-    {% block primary %}
-    {% endblock  %}
+
+<div class="card-section">
+        <div class="container">
+            <div class="card-block bg-white mb30 shadow rounded">
                 {% block content %}
                 {% endblock %}
             </div>

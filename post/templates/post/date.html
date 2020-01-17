@@ -1,0 +1,32 @@
+{% extends "post/base.html" %}
+
+{% block topbar %}
+Posts on {{date}}
+{% endblock  %}
+
+{% block title %}
+Postern Notebook
+{% endblock %}
+
+{% block info %}
+{% endblock  %}
+
+{% block content %}
+<h1>Here are the posts that have been written on {{date}}</h1>
+<p>read theme from here..</p>
+<div class="row">
+    {% for post in posts %}
+    <div class="col-sm-12 box">
+        <div class="row">
+            <div class="col-sm-8"><h1><a class="section-title" href="{% url 'post' post.author post.title %}">{{post.title}}</a></h1></div>
+        </div>
+            <p class="section-content">{{post.content|truncatechars:150}}</p>
+                    <div class="row">
+            <p class="col-sm-2"><span class="fa fa-clock-o"></span> {{post.publish}}</p> 
+            <p class="col-sm-3"><span class="at">@</span><a href="{% url 'user' post.author %}" class="origin"> {{post.author}}</a></p>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

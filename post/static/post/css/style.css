@@ -45,17 +45,8 @@ body {
   color: #fff;
 }
 
-.link {
-  text-decoration: none;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.link:focus,
-.link:hover {
-  text-decoration: none;
-  color: #ffc400;
+.origin{
+  color: #8d8f90;
 }
 
 .page-header {
@@ -144,8 +135,8 @@ body {
   color: red;
 }
 
-.date {
-  margin-top: 5px;
+.at{
+      user-select: none;
 }
 
 h1 {
@@ -177,6 +168,19 @@ h3 {
 
 p{
   line-height: 25px;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #ffc400;
 }
 
 .page-footer {

@@ -1,0 +1,31 @@
+{% extends "post/base.html" %}
+
+{% block topbar %}
+{{user.adminprofile.last_name}}'s WorkFlow
+{% endblock  %}
+
+{% block title %}
+Postern Notebook
+{% endblock %}
+
+{% block info %}
+                        <ul class="non-circle">
+                            <li><a href="https://github.com/lnxpy" class="me"><span class="fa fa-github-alt"></span></a></li>
+                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="me"><span class="fa fa-google"></span></a></li>
+                        </ul>
+{% endblock  %}
+
+{% block content %}
+
+{% if user.adminprofile.avatar %}
+{% load static %}
+<img src="{{ user.adminprofile.avatar.url }}" width=200px height=200px style="border-radius: 5px; border: dashed thin;">
+    {% else %}
+    <img src="{% static 'post/files/untitled.jpg' %}" width=200px height=200px style="border-radius: 5px; border: dashed thin;">
+    {% endif %}
+<h1><span>{{user.first_name}}</span> <span>{{user.last_name}}</span></h1>
+<h3>@ <span>{{user.username}}</span></h3>
+<h3><span>{{user.adminprofile.email}}</span></h3>
+<h3><a>{{user.adminprofile.github}}</a></h3>
+<h3><span>{{user.adminprofile.twitter}}</span></h3>
+{% endblock %}

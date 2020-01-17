@@ -10,31 +10,33 @@ Postern Notebook
 
 {% block info %}
                         <ul class="non-circle">
-                            <li><a href="https://github.com/lnxpy" class="link me"><span class="fa fa-github-alt"></span></a></li>
-                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="link me"><span class="fa fa-google"></span></a></li>
+                            <li><a href="https://github.com/lnxpy" class="me"><span class="fa fa-github-alt"></span></a></li>
+                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="me"><span class="fa fa-google"></span></a></li>
+                            {% if is_admin %}
+                            <li><a href="{% url 'new' %}" class="me"><span class="fa fa-plus"></span></a></li>
+                            {% endif %}
                         </ul>
 {% endblock  %}
 
-{% block primary %}
-<div class="card-section">
-        <div class="container">
-            <div class="card-block bg-white mb30 shadow rounded">
+{% block content %}
             <h1>Postern Notebook</h1>
             <hr>
             <p class="content">Postern is my Django-based online notebook which I write interesting posts for you in. It's <b>Ali Reza Yahyapour (lnxpy)</b> and Postern is where you can follow me and mine.</p>
             <br>
             <h3><span class="fa fa-hand-o-right"></span> You can also read about..</h3>
             <p class="content">In the Postern, you can find about programming, web development, AI, Data Science, and whatever amazes me and you.</p>
-{% endblock  %}
-{% block content %}
 <div class="row">
     {% for post in posts %}
     <div class="col-sm-12 box">
         <div class="row">
-            <div class="col-sm-7"><h1><a class="section-title" href="{{post.title}}">{{post.title}}</a></h1></div>
+            <div class="col-sm-8"><h1><a class="section-title" href="{% url 'post' post.author post.title %}">{{post.title}}</a></h1></div>
         </div>
-            <p class="section-content">{{post.summary}}..</p>
-            <p><span class="fa fa-clock-o"></span><span class="date"> {{post.publish}}</span></p>            
+            <p class="section-content">{{post.content|truncatechars:150}}</p>
+                    <div class="row">
+            <p class="col-sm-2"><span class="fa fa-clock-o"></span><a href="{% url 'date' post.publish %}" class="origin"> {{post.publish}}</a></p> 
+            <p class="col-sm-3"><span class="at">@</span><a href="{% url 'user' post.author %}" class="origin"> {{post.author}}</a></p>
+
+        </div>
     </div>
     {% endfor %}
 </div>
