@@ -15,7 +15,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'post/css/style.css' %}">
     <script src="{% static 'post/js/main.js'%}"></script>
-
+    <style type="text/css">
+        {% block css %}
+        {% endblock %}
+    </style>
 </head>
 
 <body>

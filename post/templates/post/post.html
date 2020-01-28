@@ -8,11 +8,27 @@
 {{post.title}}
 {% endblock %}
 
+{% block css %}
+.page-header {
+        background: url({{post.cover.url}}) no-repeat fixed;
+        position: reletive;
+  		background-position: center;
+  		background-size: cover;
+}
+{% endblock %}
+
 {% block info %}
+                        <ul class="non-circle">
+                            <li><a href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text={{post.content}}via={{post.user}}" class="me"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" class="me"><span class="fa fa-facebook"></span></a></li>
+                            {% if is_admin %}
+                            <li><a href="{% url 'new' %}" class="me"><span class="fa fa-plus"></span></a></li>
+                            {% endif %}
+                        </ul>
 {% endblock  %}
 
 {% block content %}
             <h1>{{post.title}}</h1>
             <hr>
-            <p class="content">{{post.content |linebreaks}}</p>          		
+            <p class="content">{{post.content |linebreaks}}</p>
 {% endblock  %}

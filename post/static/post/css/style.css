@@ -49,12 +49,6 @@ body {
   color: #8d8f90;
 }
 
-.page-header {
-  background: url(../files/back.jpg) no-repeat fixed;
-  position: relative;
-  background-size: cover;
-}
-
 .page-caption {
   padding-top: 170px;
   padding-bottom: 174px;

@@ -1,4 +1,5 @@
 {% extends "post/base.html" %}
+{% load static %}
 
 {% block topbar %}
 Postern Notebook
@@ -6,6 +7,14 @@ Postern Notebook
 
 {% block title %}
 Postern Notebook
+{% endblock %}
+
+{% block css %}
+.page-header{
+        background: url({% static 'post/files/back.jpg'%}) no-repeat fixed;
+        position: relative;
+        background-size: cover;
+}
 {% endblock %}
 
 {% block info %}

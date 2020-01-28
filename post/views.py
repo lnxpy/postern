@@ -13,13 +13,15 @@ from django.contrib.auth.models import User
 
 def index(request):
     context = {
-        'posts': reversed(models.Post.objects.all()),
+        'posts': list(reversed(models.Post.objects.all())),
         'is_admin': False,
     }
+    print(context)
     user = User.objects.all()
     users = [i['username'] for i in user.values()]
     if str(request.user) in users:
     	context['is_admin'] = True
+    print(context['posts'])
     return render(request, 'post/index.html', context)
 
 
@@ -47,12 +49,12 @@ def date(request, date):
 @login_required(login_url='/admin')
 def new(request):
     if request.method == "POST":
-        form = PostForm(request.POST)
+        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
             post.publish = timezone.now()
-            post.save()
+            form.save()
             return redirect('home')
     else:
         form = PostForm()
