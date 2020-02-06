@@ -3,7 +3,10 @@
 {% block content %}
     <h2>New post</h2>
     <form method="POST" enctype="multipart/form-data" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
+        {{ form.cover }}<br><br>
+        {{ form.title }}<br><br>
+        {{ form.content | safe }}<br><br>
+        {{ form.media }}<br><br>
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 {% endblock %}

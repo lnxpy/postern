@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.utils import timezone
 from . import models
-from .forms import PostForm
+from .forms import PostForm, Profile
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -48,8 +48,8 @@ def date(request, date):
 
 @login_required(login_url='/admin')
 def new(request):
+    form = PostForm(request.POST, request.FILES)
     if request.method == "POST":
-        form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
@@ -59,3 +59,17 @@ def new(request):
     else:
         form = PostForm()
     return render(request, 'post/new.html', {'form': form})
+
+@login_required(login_url='/admin')
+def profile(request):
+    form = Profile(request.POST, request.FILES, initial= {'city':'hi'})
+    if request.method == "POST":
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.publish = timezone.now()
+            form.save()
+            return redirect('home')
+    else:
+        form = Profile()
+    return render(request, 'post/profile.html', {'form': form})

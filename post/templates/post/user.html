@@ -1,31 +1,65 @@
 {% extends "post/base.html" %}
+{% load static %}
 
 {% block topbar %}
-{{user.adminprofile.last_name}}'s WorkFlow
+Admins WorkFlow
 {% endblock  %}
 
 {% block title %}
-Postern Notebook
+Admins WorkFlow
 {% endblock %}
 
 {% block info %}
-                        <ul class="non-circle">
-                            <li><a href="https://github.com/lnxpy" class="me"><span class="fa fa-github-alt"></span></a></li>
-                            <li><a href="mailto:lnxpylnxpy@gmail.com?" class="me"><span class="fa fa-google"></span></a></li>
-                        </ul>
 {% endblock  %}
 
-{% block content %}
+{% block css %}
+.page-header {
+		{% if user.adminprofile.cover %}
+        background: url({{user.adminprofile.cover.url}}) no-repeat fixed;
+        {% else %}
+        background: url({% static 'post/files/backimg.jpg' %}) no-repeat fixed;
+        {% endif %}
+        position: reletive;
+  		background-position: center;
+  		background-size: cover;
+}
+{% endblock %}
 
-{% if user.adminprofile.avatar %}
-{% load static %}
-<img src="{{ user.adminprofile.avatar.url }}" width=200px height=200px style="border-radius: 5px; border: dashed thin;">
-    {% else %}
-    <img src="{% static 'post/files/untitled.jpg' %}" width=200px height=200px style="border-radius: 5px; border: dashed thin;">
-    {% endif %}
-<h1><span>{{user.first_name}}</span> <span>{{user.last_name}}</span></h1>
-<h3>@ <span>{{user.username}}</span></h3>
-<h3><span>{{user.adminprofile.email}}</span></h3>
-<h3><a>{{user.adminprofile.github}}</a></h3>
-<h3><span>{{user.adminprofile.twitter}}</span></h3>
+{% block content %}
+<div class="row" style="height: 210px">
+	<div class="col-sm-3" style="height: 100%">
+		<center>
+		<img src="{{user.adminprofile.avatar.url}}" width="200px" height="200px" style="border-radius: 5px; box-shadow: 5px 5px 5px -2px;">
+		</center>
+	</div>
+		<div class="col-sm-9" style="height: 100%">
+		<h1>{{user.adminprofile.first_name}} {{user.adminprofile.last_name}}</h1>
+		<h4>{{user.adminprofile.bio}}</h4>
+		<hr>
+		{% if user.adminprofile.city %}
+			<h5><span class="fa fa-world"></span> {{user.adminprofile.city}}</h5>
+		{% endif %}
+		<ul class="non-circle">
+        	{% if user.adminprofile.github %}
+            	<li><a href="{{user.adminprofile.github}}" class=""><span class="fa fa-github-alt"></span></a></li>
+			{% endif %}
+            {% if user.adminprofile.twitter %}
+            	<li><a href="{{user.adminprofile.twitter}}" class="me"><span class="fa fa-twitter"></span></a></li>
+			{% endif %}
+            {% if user.adminprofile.linkedin %}
+            	<li><a href="{{user.adminprofile.linkedin}}" class="me"><span class="fa fa-linkedin"></span></a></li>
+            {% endif %}
+		</ul>
+	</div>
+</div>
+<br>
+
+<div class="row">
+	{% for post in posts %}
+	<div class="col-sm-4 box">
+		<a href="{% url 'post' post.author post.title %}"><h2>{{post.title}}</h2></a>
+		<h6>{{post.publish}}</h6>
+	</div>
+	{% endfor %}
+</div>
 {% endblock %}

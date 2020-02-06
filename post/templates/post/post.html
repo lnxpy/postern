@@ -1,7 +1,7 @@
 {% extends "post/base.html" %}
 
 {% block topbar %}
-{{post.title}}
+{{post.author}} - {{post.title}}
 {% endblock  %}
 
 {% block title %}
@@ -30,5 +30,5 @@
 {% block content %}
             <h1>{{post.title}}</h1>
             <hr>
-            <p class="content">{{post.content |linebreaks}}</p>
+            <p class="content">{{post.content|safe}}</p>
 {% endblock  %}

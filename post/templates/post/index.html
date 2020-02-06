@@ -23,6 +23,7 @@ Postern Notebook
                             <li><a href="mailto:lnxpylnxpy@gmail.com?" class="me"><span class="fa fa-google"></span></a></li>
                             {% if is_admin %}
                             <li><a href="{% url 'new' %}" class="me"><span class="fa fa-plus"></span></a></li>
+                            <li><a href="{% url 'profile' %}" class="me"><span class="fa fa-user-o"></span></a></li>
                             {% endif %}
                         </ul>
 {% endblock  %}
@@ -30,7 +31,7 @@ Postern Notebook
 {% block content %}
             <h1>Postern Notebook</h1>
             <hr>
-            <p class="content">Postern is my Django-based online notebook which I write interesting posts for you in. It's <b>Ali Reza Yahyapour (lnxpy)</b> and Postern is where you can follow me and mine.</p>
+            <p class="content">Postern is a Django-based online notebook which we write interesting posts for you in. It's <b>Ali Reza Yahyapour (lnxpy)</b> and Postern is where you can follow the admins of Postern.</p>
             <br>
             <h3><span class="fa fa-hand-o-right"></span> You can also read about..</h3>
             <p class="content">In the Postern, you can find about programming, web development, AI, Data Science, and whatever amazes me and you.</p>
@@ -40,9 +41,9 @@ Postern Notebook
         <div class="row">
             <div class="col-sm-8"><h1><a class="section-title" href="{% url 'post' post.author post.title %}">{{post.title}}</a></h1></div>
         </div>
-            <p class="section-content">{{post.content|truncatechars:150}}</p>
+            <p class="section-content">{{post.abstract}}</p>
                     <div class="row">
-            <p class="col-sm-2"><span class="fa fa-clock-o"></span><a href="{% url 'date' post.publish %}" class="origin"> {{post.publish}}</a></p> 
+            <p class="col-sm-3"><span class="fa fa-clock-o"></span><a href="{% url 'date' post.publish %}" class="origin"> {{post.publish}}</a></p> 
             <p class="col-sm-3"><span class="at">@</span><a href="{% url 'user' post.author %}" class="origin"> {{post.author}}</a></p>
 
         </div>
