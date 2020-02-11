@@ -57,7 +57,7 @@ Now, you should have something like this. You can change templates, add new view
 - [x] Getting ready for the deployments on the server
 - [x] Simple features for Postern (post structures and database development)
 - [ ] UI Compilations
-- [ ] Getting ready for the **Great Celebration** 🎉🍰🥳
+- [x] Getting ready for the **Great Celebration** 🎉🍰🥳
 
 ### Thanks to..
 * [Django](https://djangoproject.com)
