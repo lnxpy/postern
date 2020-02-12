@@ -1,6 +1,6 @@
 backcall==0.1.0
 decorator==4.4.1
-Django==2.2.8
+Django==2.2.10
 django-ckeditor==5.9.0
 django-js-asset==1.2.2
 ipython==7.11.1
