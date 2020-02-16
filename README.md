@@ -1,6 +1,6 @@
 # <span><img src="https://lnxpy.pythonanywhere.com/static/post/files/fav.png" width="25px"></span> Postern Notebook ![Generic badge](https://img.shields.io/badge/Build-inprogress-<COLOR>.svg) ![Generic badge](https://img.shields.io/badge/License-MIT-orange.svg) ![Generic badge](https://img.shields.io/badge/Language-python-yellow.svg) ![Generic badge](https://img.shields.io/badge/Framework-Django-green.svg)
 
-Django-based project to store my events with you. Postern is basically a project with Worpress-like posting platform to store your stats and situations with your friends. In this journy, I'm going to show you how a tiny project gets bigger and bigger and how wonderful it goes on. You can also visit the Postern from [here](lnxpy.pythonanywhere.com).
+Django-based project to store my events with you. Postern is basically a project with Worpress-like posting platform to store your stats and situations with your friends. In this journy, I'm going to show you how a tiny project gets bigger and bigger and how wonderful it goes on. You can also visit the Postern from [here](https://www.lnxpy.pythonanywhere.com).
 
 # Set it Up
 Let's take a look at how you can have this project on your local system. You just need to do exactly what I did. Be sure that you have already installed python>3.6.
