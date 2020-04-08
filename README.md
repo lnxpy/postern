@@ -2,19 +2,19 @@
 
 Django-based project to store my events with you. Postern is basically a project with Worpress-like posting platform to store your stats and situations with your friends. In this journy, I'm going to show you how a tiny project gets bigger and bigger and how wonderful it goes on. You can also visit the Postern from [here](https://www.lnxpy.pythonanywhere.com).
 
-# Set it Up
+### Set it Up
 Let's take a look at how you can have this project on your local system. You just need to do exactly what I did. Be sure that you have already installed python>3.6.
 
-#### Clone it
-###### Linux
+### Clone it
+#### Linux
 Let's clone the original Postern and install it's requirements locally. Clone the Postern repository with the following command.
 
     git clone https://github.com/lnxpy/postern.git
 
 Now, you just need to create a venv and install the requirements of Postern.
 
-#### Create a Virtual Environment
-###### Linux
+### Create a Virtual Environment
+#### Linux
 Install the pip3 package on your system with the following command on your `terminal`.
 
     sudo apt-get install python3-pip
@@ -33,20 +33,20 @@ Now, you've switched into your virtualenv which is `.venv`. Let's install the re
 
     pip install -r requirements.txt 
 
-#### Finally, Run it
-###### Linux
+### Finally, Run it
+#### Linux
 Before you could run it up, you need to create a database for your project. Use the following commands to create the sqlite database and get the first run of your project on your local system. Before you collect the database and run the project, be sure that `DEBUG` variable switched to `True`.
 
     python manage.py migrate
     python manage.py runserver
 
-# Preview
+### Preview
 Now, you should have something like this. You can change templates, add new views, add new features, and make it ready for the deployment on your specific server. Enjoy it.
 
 <center><img src="https://github.com/lnxpy/postern/blob/master/shots/shot.jpeg">
 </center>
 
-# TODO list
+### TODO list
 - [x] Creating the project
 - [x] Pushing my first commit to GitHub
 - [x] Primary changes
@@ -66,4 +66,4 @@ Now, you should have something like this. You can change templates, add new view
 ### Fork
 Fork and develop are free for everyone. Be sure I'll check your push requests out.
 
-###### Made with ❤
+###### Made with :heart:
