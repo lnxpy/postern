@@ -133,3 +133,4 @@ dmypy.json
 
 # Handmade
 media/*
+postern/secret.txt
