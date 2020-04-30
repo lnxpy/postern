@@ -1,4 +1,5 @@
 {% extends "post/base.html" %}
+{% load static %}
 
 {% block topbar %}
 Posts on {{date}}
@@ -6,6 +7,15 @@ Posts on {{date}}
 
 {% block title %}
 Postern Notebook
+{% endblock %}
+
+{% block css %}
+.page-header{
+background: url(https://images.pexels.com/photos/851213/pexels-photo-851213.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)
+no-repeat fixed;
+position: relative;
+background-size: cover;
+}
 {% endblock %}
 
 {% block info %}
@@ -18,12 +28,15 @@ Postern Notebook
     {% for post in posts %}
     <div class="col-sm-12 box">
         <div class="row">
-            <div class="col-sm-8"><h1><a class="section-title" href="{% url 'post' post.author post.title %}">{{post.title}}</a></h1></div>
+            <div class="col-sm-8">
+                <h1><a class="section-title" href="{% url 'post' post.author post.title %}">{{post.title}}</a></h1>
+            </div>
         </div>
-            <p class="section-content">{{post.content|truncatechars:150}}</p>
-                    <div class="row">
-            <p class="col-sm-2"><span class="fa fa-clock-o"></span> {{post.publish}}</p> 
-            <p class="col-sm-3"><span class="at">@</span><a href="{% url 'user' post.author %}" class="origin"> {{post.author}}</a></p>
+        <p class="section-content">{{post.abstract|truncatechars:150}}</p>
+        <div class="row">
+            <p class="col-sm-3"><span class="fa fa-clock-o"></span> {{post.publish}}</p>
+            <p class="col-sm-3"><span class="at">@</span><a href="{% url 'user' post.author %}" class="origin">
+                    {{post.author}}</a></p>
 
         </div>
     </div>

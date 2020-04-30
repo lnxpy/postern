@@ -6,6 +6,7 @@ from .forms import PostForm, Profile
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserChangeForm
 
 
 # Create your views here.
@@ -20,7 +21,7 @@ def index(request):
     user = User.objects.all()
     users = [i['username'] for i in user.values()]
     if str(request.user) in users:
-    	context['is_admin'] = True
+        context['is_admin'] = True
     print(context['posts'])
     return render(request, 'post/index.html', context)
 
@@ -34,17 +35,19 @@ def post(request, user, title):
 
 def user(request, user):
     context = {
-    	'user': get_object_or_404(User.objects.filter(username=user)),
+        'user': get_object_or_404(User.objects.filter(username=user)),
         'posts': reversed(models.Post.objects.filter(author=user)),
     }
     return render(request, 'post/user.html', context)
 
+
 def date(request, date):
-	context = {
-		'posts': models.Post.objects.filter(publish=date),
-		'date': date,
-	}
-	return render(request, 'post/date.html', context)
+    context = {
+        'posts': models.Post.objects.filter(publish=date),
+        'date': date,
+    }
+    return render(request, 'post/date.html', context)
+
 
 @login_required(login_url='/admin')
 def new(request):
@@ -60,12 +63,13 @@ def new(request):
         form = PostForm()
     return render(request, 'post/new.html', {'form': form})
 
+
 @login_required(login_url='/admin')
 def profile(request):
-    form = Profile(request.POST, request.FILES, initial= {'city':'hi'})
     if request.method == "POST":
+        form = UserChangeForm(request.POST, instance=request.user)
         if form.is_valid():
-            post = form.save(commit=False)
+            post = form.save()
             post.author = request.user
             post.publish = timezone.now()
             form.save()
